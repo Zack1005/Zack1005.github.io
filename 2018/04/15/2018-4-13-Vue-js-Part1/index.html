@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="About MeAn ordinary student who goes to SYSU.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="Vue.js声明式渲染&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;   {{ message }} &amp;lt;/div&amp;gt;  var app = new Vue({   el: &amp;apos;#app&amp;apos;,   data: {     message: &amp;apos;Hello Vue!&amp;apos;   } }) 通过渲染这种方式我们可以将数据和DOM建立关联。 条件与循环条">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2018-4-13-Vue-js-Part1">
+<meta property="og:url" content="http://yoursite.com/2018/04/15/2018-4-13-Vue-js-Part1/index.html">
 <meta property="og:site_name" content="Zack&#39;s Blog">
-<meta property="og:description" content="About MeAn ordinary student who goes to SYSU.">
+<meta property="og:description" content="Vue.js声明式渲染&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;   {{ message }} &amp;lt;/div&amp;gt;  var app = new Vue({   el: &amp;apos;#app&amp;apos;,   data: {     message: &amp;apos;Hello Vue!&amp;apos;   } }) 通过渲染这种方式我们可以将数据和DOM建立关联。 条件与循环条">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-13T15:38:14.028Z">
+<meta property="og:image" content="http://yoursite.com/2018/04/15/2018-4-13-Vue-js-Part1/lifecycle.png">
+<meta property="og:updated_time" content="2018-04-15T01:41:38.142Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="About MeAn ordinary student who goes to SYSU.">
+<meta name="twitter:title" content="2018-4-13-Vue-js-Part1">
+<meta name="twitter:description" content="Vue.js声明式渲染&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;   {{ message }} &amp;lt;/div&amp;gt;  var app = new Vue({   el: &amp;apos;#app&amp;apos;,   data: {     message: &amp;apos;Hello Vue!&amp;apos;   } }) 通过渲染这种方式我们可以将数据和DOM建立关联。 条件与循环条">
+<meta name="twitter:image" content="http://yoursite.com/2018/04/15/2018-4-13-Vue-js-Part1/lifecycle.png">
 
 
 
@@ -119,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/15/2018-4-13-Vue-js-Part1/"/>
 
 
 
 
 
-  <title>about | Zack's Blog</title>
+  <title>2018-4-13-Vue-js-Part1 | Zack's Blog</title>
   
 
 
@@ -240,34 +242,209 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/15/2018-4-13-Vue-js-Part1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zack">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zack's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h1 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h1><p>An ordinary student who goes to SYSU.</p>
-
+          <h1 class="post-title" itemprop="name headline">2018-4-13-Vue-js-Part1</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-15T09:41:20+08:00">
+                2018-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h1><h2 id="声明式渲染"><a href="#声明式渲染" class="headerlink" title="声明式渲染"></a>声明式渲染</h2><pre><code>&lt;div id=&quot;app&quot;&gt;
+  {{ message }}
+&lt;/div&gt;
+
+var app = new Vue({
+  el: &apos;#app&apos;,
+  data: {
+    message: &apos;Hello Vue!&apos;
+  }
+})
+</code></pre><p>通过渲染这种方式我们可以将数据和DOM建立关联。</p>
+<h2 id="条件与循环"><a href="#条件与循环" class="headerlink" title="条件与循环"></a>条件与循环</h2><h3 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h3><pre><code>&lt;div id=&quot;app-3&quot;&gt;
+  &lt;p v-if=&quot;seen&quot;&gt;现在你看到我了&lt;/p&gt;
+&lt;/div&gt;
+
+var app3 = new Vue({
+  el: &apos;#app-3&apos;,
+  data: {
+    seen: true
+  }
+})
+</code></pre><p>在这个例子中，我们把数据绑定到了DOM结构。</p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><pre><code>&lt;div id=&quot;app-4&quot;&gt;
+  &lt;ol&gt;
+    &lt;li v-for=&quot;todo in todos&quot;&gt;
+      {{ todo.text }}
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+var app4 = new Vue({
+  el: &apos;#app-4&apos;,
+  data: {
+    todos: [
+      { text: &apos;学习 JavaScript&apos; },
+      { text: &apos;学习 Vue&apos; },
+      { text: &apos;整个牛项目&apos; }
+    ]
+  }
+})
+</code></pre><h2 id="处理用户输入"><a href="#处理用户输入" class="headerlink" title="处理用户输入"></a>处理用户输入</h2><pre><code>&lt;div id=&quot;app-5&quot;&gt;
+  &lt;p&gt;{{ message }}&lt;/p&gt;
+  &lt;button v-on:click=&quot;reverseMessage&quot;&gt;逆转消息&lt;/button&gt;
+&lt;/div&gt;
+
+var app5 = new Vue({
+  el: &apos;#app-5&apos;,
+  data: {
+    message: &apos;Hello Vue.js!&apos;
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split(&apos;&apos;).reverse().join(&apos;&apos;)
+    }
+  }
+})
+</code></pre><p>v-on是一个事件监听器，我们可以通过它来调用在vue实例中的监听方法</p>
+<h2 id="一切的开始"><a href="#一切的开始" class="headerlink" title="一切的开始"></a>一切的开始</h2><pre><code>var vm = new Vue({
+  // 选项
+})
+</code></pre><p>我们可以通过传入选项来控制vm的行为。一个Vue应用由一个根Vue实例以及可选的嵌套的，可复用的组件树组成</p>
+<h2 id="生命周期钩子"><a href="#生命周期钩子" class="headerlink" title="生命周期钩子"></a>生命周期钩子</h2><p><img src="/2018/04/15/2018-4-13-Vue-js-Part1/lifecycle.png" alt="LifeCycle"><br>在生命周期的各个阶段，我们都可以添加钩子函数，来为vue添加不同的方法。以created为例：</p>
+<pre><code>new Vue({
+  data: {
+    a: 1
+  },
+  created: function () {
+    // `this` points to the vm instance
+    console.log(&apos;a is: &apos; + this.a)
+  }
+})
+// =&gt; &quot;a is: 1&quot;
+</code></pre>
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/18/2018-3-18-Homework2/" rel="next" title="2018-3-18-Homework2">
+                <i class="fa fa-chevron-left"></i> 2018-3-18-Homework2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -381,7 +558,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#About-Me"><span class="nav-number">1.</span> <span class="nav-text">About Me</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue-js"><span class="nav-number">1.</span> <span class="nav-text">Vue.js</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#声明式渲染"><span class="nav-number">1.1.</span> <span class="nav-text">声明式渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件与循环"><span class="nav-number">1.2.</span> <span class="nav-text">条件与循环</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#条件"><span class="nav-number">1.2.1.</span> <span class="nav-text">条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环"><span class="nav-number">1.2.2.</span> <span class="nav-text">循环</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理用户输入"><span class="nav-number">1.3.</span> <span class="nav-text">处理用户输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一切的开始"><span class="nav-number">1.4.</span> <span class="nav-text">一切的开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生命周期钩子"><span class="nav-number">1.5.</span> <span class="nav-text">生命周期钩子</span></a></li></ol></li></ol></div>
             
 
           </div>
