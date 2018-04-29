@@ -249,6 +249,295 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/29/2018-4-29-DomainModel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zack">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zack's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/29/2018-4-29-DomainModel/" itemprop="url">2018-4-29-DomainModel</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-29T09:34:21+08:00">
+                2018-04-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="阅读-Asg-RH-文档，按用例构建领域模型。"><a href="#阅读-Asg-RH-文档，按用例构建领域模型。" class="headerlink" title="阅读 Asg_RH 文档，按用例构建领域模型。"></a>阅读 Asg_RH 文档，按用例构建领域模型。</h2><ul>
+<li>按 Task2 要求，请使用工具 UMLet，截图格式务必是 png 并控制尺寸</li>
+<li>说明：请不要受 PCMEF 层次结构影响。你需要识别实体（E）和 中介实体（M，也称状态实体）<ul>
+<li>在单页面应用（如 vue）中，E 一般与数据库构建有关， M 一般与 store 模式 有关</li>
+<li>在java web 应用中，E 一般与数据库构建有关， M 一般与 session 有关</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2018/04/29/2018-4-29-DomainModel/domainModel.png" alt="domainModel"></p>
+<h2 id="数据库建模-E-R-模型"><a href="#数据库建模-E-R-模型" class="headerlink" title="数据库建模(E-R 模型)"></a>数据库建模(E-R 模型)</h2><ul>
+<li>按 Task 3 要求，给出系统的 E-R 模型（数据逻辑模型）</li>
+<li>建模工具 PowerDesigner（简称PD） 或开源工具 OpenSystemArchitect</li>
+<li>不负责的链接 <a href="http://www.cnblogs.com/mcgrady/archive/2013/05/25/3098588.html" target="_blank" rel="noopener">http://www.cnblogs.com/mcgrady/archive/2013/05/25/3098588.html</a></li>
+<li>导出 Mysql 物理数据库的脚本</li>
+<li>简单叙说 数据库逻辑模型 与 领域模型 的异同</li>
+</ul>
+<p><img src="/2018/04/29/2018-4-29-DomainModel/ER.png" alt="ER"></p>
+<pre><code>/*==============================================================*/
+/* DBMS name:      Sybase SQL Anywhere 12                       */
+/* Created on:     2018/4/29 11:21:50                           */
+/*==============================================================*/
+
+
+if exists(select 1 from sys.sysforeignkey where role=&apos;FK_HOTEL_REFERENCE_ROOM&apos;) then
+    alter table Hotel
+       delete foreign key FK_HOTEL_REFERENCE_ROOM
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role=&apos;FK_HOTEL_REFERENCE_CITY&apos;) then
+    alter table Hotel
+       delete foreign key FK_HOTEL_REFERENCE_CITY
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role=&apos;FK_RESERVAT_REFERENCE_CUSTOMER&apos;) then
+    alter table Reservation
+       delete foreign key FK_RESERVAT_REFERENCE_CUSTOMER
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role=&apos;FK_RESERVAT_REFERENCE_HOTEL&apos;) then
+    alter table Reservation
+       delete foreign key FK_RESERVAT_REFERENCE_HOTEL
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role=&apos;FK_SHOPPING_REFERENCE_RESERVAT&apos;) then
+    alter table ShoppingBasket
+       delete foreign key FK_SHOPPING_REFERENCE_RESERVAT
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role=&apos;FK_SHOPPING_REFERENCE_CUSTOMER&apos;) then
+    alter table ShoppingBasket
+       delete foreign key FK_SHOPPING_REFERENCE_CUSTOMER
+end if;
+
+drop table if exists City;
+
+drop table if exists Customer;
+
+drop table if exists Hotel;
+
+drop table if exists Reservation;
+
+drop table if exists Room;
+
+drop table if exists ShoppingBasket;
+
+/*==============================================================*/
+/* Table: City                                                  */
+/*==============================================================*/
+create table City 
+(
+   cityName             long varchar                   not null,
+   constraint PK_CITY primary key clustered (cityName)
+);
+
+/*==============================================================*/
+/* Table: Customer                                              */
+/*==============================================================*/
+create table Customer 
+(
+   name                 long varchar                   not null,
+   email                long varchar                   null,
+   phone                long varchar                   null,
+   constraint PK_CUSTOMER primary key clustered (name)
+);
+
+/*==============================================================*/
+/* Table: Hotel                                                 */
+/*==============================================================*/
+create table Hotel 
+(
+   name                 long varchar                   not null,
+   roomType             long varchar                   null,
+   cityName             long varchar                   null,
+   constraint PK_HOTEL primary key clustered (name)
+);
+
+/*==============================================================*/
+/* Table: Reservation                                           */
+/*==============================================================*/
+create table Reservation 
+(
+   CheckInDate          date                           null,
+   CheckOutDate         date                           null,
+   RoomType             long varchar                   null,
+   HotelName            long varchar                   null,
+   ReservationId        integer                        not null,
+   name                 long varchar                   null,
+   Hot_name             long varchar                   null,
+   CustomerName         long varchar                   null,
+   constraint PK_RESERVATION primary key clustered (ReservationId)
+);
+
+/*==============================================================*/
+/* Table: Room                                                  */
+/*==============================================================*/
+create table Room 
+(
+   roomType             long varchar                   not null,
+   quantity             integer                        null,
+   constraint PK_ROOM primary key clustered (roomType)
+);
+
+/*==============================================================*/
+/* Table: ShoppingBasket                                        */
+/*==============================================================*/
+create table ShoppingBasket 
+(
+   CustomerName         long varchar                   null,
+   ReservationId        integer                        not null,
+   name                 long varchar                   null,
+   constraint PK_SHOPPINGBASKET primary key clustered (ReservationId)
+);
+
+alter table Hotel
+   add constraint FK_HOTEL_REFERENCE_ROOM foreign key (roomType)
+      references Room (roomType)
+      on update restrict
+      on delete restrict;
+
+alter table Hotel
+   add constraint FK_HOTEL_REFERENCE_CITY foreign key (cityName)
+      references City (cityName)
+      on update restrict
+      on delete restrict;
+
+alter table Reservation
+   add constraint FK_RESERVAT_REFERENCE_CUSTOMER foreign key (name)
+      references Customer (name)
+      on update restrict
+      on delete restrict;
+
+alter table Reservation
+   add constraint FK_RESERVAT_REFERENCE_HOTEL foreign key (Hot_name)
+      references Hotel (name)
+      on update restrict
+      on delete restrict;
+
+alter table ShoppingBasket
+   add constraint FK_SHOPPING_REFERENCE_RESERVAT foreign key (ReservationId)
+      references Reservation (ReservationId)
+      on update restrict
+      on delete restrict;
+
+alter table ShoppingBasket
+   add constraint FK_SHOPPING_REFERENCE_CUSTOMER foreign key (name)
+      references Customer (name)
+      on update restrict
+      on delete restrict;
+</code></pre><p>数据库逻辑模型于领域模型的异同：<br>领域模型是一个商业建模范畴的概念，它和软件开发无关系。即使一个企业不开发软件也应该有业务模型。</p>
+<p>数据模型是系统设计以及实现的一部分。描述的是对用户需求在技术上的实现方法，用户不需要关心系统的数据模型，但必须关注领域模型。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/22/2018-4-22-task4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -984,7 +1273,7 @@ var app5 = new Vue({
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -997,7 +1286,7 @@ var app5 = new Vue({
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>

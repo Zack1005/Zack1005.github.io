@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="System Analysis And Design," />
+  <meta name="keywords" content="System Analysis and Design," />
 
 
 
@@ -79,20 +79,21 @@
 
 
 
-<meta name="description" content="Vue.js声明式渲染&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;   {{ message }} &amp;lt;/div&amp;gt;  var app = new Vue({   el: &amp;apos;#app&amp;apos;,   data: {     message: &amp;apos;Hello Vue!&amp;apos;   } }) 通过渲染这种方式我们可以将数据和DOM建立关联。 条件与循环条">
-<meta name="keywords" content="System Analysis And Design">
+<meta name="description" content="阅读 Asg_RH 文档，按用例构建领域模型。 按 Task2 要求，请使用工具 UMLet，截图格式务必是 png 并控制尺寸 说明：请不要受 PCMEF 层次结构影响。你需要识别实体（E）和 中介实体（M，也称状态实体） 在单页面应用（如 vue）中，E 一般与数据库构建有关， M 一般与 store 模式 有关 在java web 应用中，E 一般与数据库构建有关， M 一般与 sessio">
+<meta name="keywords" content="System Analysis and Design">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2018-4-13-Vue-js-Part1">
-<meta property="og:url" content="http://yoursite.com/2018/04/15/2018-4-13-Vue-js-Part1/index.html">
+<meta property="og:title" content="2018-4-29-DomainModel">
+<meta property="og:url" content="http://yoursite.com/2018/04/29/2018-4-29-DomainModel/index.html">
 <meta property="og:site_name" content="Zack&#39;s Blog">
-<meta property="og:description" content="Vue.js声明式渲染&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;   {{ message }} &amp;lt;/div&amp;gt;  var app = new Vue({   el: &amp;apos;#app&amp;apos;,   data: {     message: &amp;apos;Hello Vue!&amp;apos;   } }) 通过渲染这种方式我们可以将数据和DOM建立关联。 条件与循环条">
+<meta property="og:description" content="阅读 Asg_RH 文档，按用例构建领域模型。 按 Task2 要求，请使用工具 UMLet，截图格式务必是 png 并控制尺寸 说明：请不要受 PCMEF 层次结构影响。你需要识别实体（E）和 中介实体（M，也称状态实体） 在单页面应用（如 vue）中，E 一般与数据库构建有关， M 一般与 store 模式 有关 在java web 应用中，E 一般与数据库构建有关， M 一般与 sessio">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2018/04/15/2018-4-13-Vue-js-Part1/lifecycle.png">
-<meta property="og:updated_time" content="2018-04-22T11:28:16.938Z">
+<meta property="og:image" content="http://yoursite.com/2018/04/29/2018-4-29-DomainModel/domainModel.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/29/2018-4-29-DomainModel/ER.png">
+<meta property="og:updated_time" content="2018-04-29T03:24:01.745Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2018-4-13-Vue-js-Part1">
-<meta name="twitter:description" content="Vue.js声明式渲染&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;   {{ message }} &amp;lt;/div&amp;gt;  var app = new Vue({   el: &amp;apos;#app&amp;apos;,   data: {     message: &amp;apos;Hello Vue!&amp;apos;   } }) 通过渲染这种方式我们可以将数据和DOM建立关联。 条件与循环条">
-<meta name="twitter:image" content="http://yoursite.com/2018/04/15/2018-4-13-Vue-js-Part1/lifecycle.png">
+<meta name="twitter:title" content="2018-4-29-DomainModel">
+<meta name="twitter:description" content="阅读 Asg_RH 文档，按用例构建领域模型。 按 Task2 要求，请使用工具 UMLet，截图格式务必是 png 并控制尺寸 说明：请不要受 PCMEF 层次结构影响。你需要识别实体（E）和 中介实体（M，也称状态实体） 在单页面应用（如 vue）中，E 一般与数据库构建有关， M 一般与 store 模式 有关 在java web 应用中，E 一般与数据库构建有关， M 一般与 sessio">
+<meta name="twitter:image" content="http://yoursite.com/2018/04/29/2018-4-29-DomainModel/domainModel.png">
 
 
 
@@ -122,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/15/2018-4-13-Vue-js-Part1/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/29/2018-4-29-DomainModel/"/>
 
 
 
 
 
-  <title>2018-4-13-Vue-js-Part1 | Zack's Blog</title>
+  <title>2018-4-29-DomainModel | Zack's Blog</title>
   
 
 
@@ -255,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/15/2018-4-13-Vue-js-Part1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/29/2018-4-29-DomainModel/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zack">
@@ -272,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2018-4-13-Vue-js-Part1</h1>
+          <h1 class="post-title" itemprop="name headline">2018-4-29-DomainModel</h1>
         
 
         <div class="post-meta">
@@ -284,8 +285,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-15T09:41:20+08:00">
-                2018-04-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-29T09:34:21+08:00">
+                2018-04-29
               </time>
             
 
@@ -322,79 +323,177 @@
       
 
       
-        <h1 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h1><h2 id="声明式渲染"><a href="#声明式渲染" class="headerlink" title="声明式渲染"></a>声明式渲染</h2><pre><code>&lt;div id=&quot;app&quot;&gt;
-  {{ message }}
-&lt;/div&gt;
+        <h2 id="阅读-Asg-RH-文档，按用例构建领域模型。"><a href="#阅读-Asg-RH-文档，按用例构建领域模型。" class="headerlink" title="阅读 Asg_RH 文档，按用例构建领域模型。"></a>阅读 Asg_RH 文档，按用例构建领域模型。</h2><ul>
+<li>按 Task2 要求，请使用工具 UMLet，截图格式务必是 png 并控制尺寸</li>
+<li>说明：请不要受 PCMEF 层次结构影响。你需要识别实体（E）和 中介实体（M，也称状态实体）<ul>
+<li>在单页面应用（如 vue）中，E 一般与数据库构建有关， M 一般与 store 模式 有关</li>
+<li>在java web 应用中，E 一般与数据库构建有关， M 一般与 session 有关</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2018/04/29/2018-4-29-DomainModel/domainModel.png" alt="domainModel"></p>
+<h2 id="数据库建模-E-R-模型"><a href="#数据库建模-E-R-模型" class="headerlink" title="数据库建模(E-R 模型)"></a>数据库建模(E-R 模型)</h2><ul>
+<li>按 Task 3 要求，给出系统的 E-R 模型（数据逻辑模型）</li>
+<li>建模工具 PowerDesigner（简称PD） 或开源工具 OpenSystemArchitect</li>
+<li>不负责的链接 <a href="http://www.cnblogs.com/mcgrady/archive/2013/05/25/3098588.html" target="_blank" rel="noopener">http://www.cnblogs.com/mcgrady/archive/2013/05/25/3098588.html</a></li>
+<li>导出 Mysql 物理数据库的脚本</li>
+<li>简单叙说 数据库逻辑模型 与 领域模型 的异同</li>
+</ul>
+<p><img src="/2018/04/29/2018-4-29-DomainModel/ER.png" alt="ER"></p>
+<pre><code>/*==============================================================*/
+/* DBMS name:      Sybase SQL Anywhere 12                       */
+/* Created on:     2018/4/29 11:21:50                           */
+/*==============================================================*/
 
-var app = new Vue({
-  el: &apos;#app&apos;,
-  data: {
-    message: &apos;Hello Vue!&apos;
-  }
-})
-</code></pre><p>通过渲染这种方式我们可以将数据和DOM建立关联。</p>
-<h2 id="条件与循环"><a href="#条件与循环" class="headerlink" title="条件与循环"></a>条件与循环</h2><h3 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h3><pre><code>&lt;div id=&quot;app-3&quot;&gt;
-  &lt;p v-if=&quot;seen&quot;&gt;现在你看到我了&lt;/p&gt;
-&lt;/div&gt;
 
-var app3 = new Vue({
-  el: &apos;#app-3&apos;,
-  data: {
-    seen: true
-  }
-})
-</code></pre><p>在这个例子中，我们把数据绑定到了DOM结构。</p>
-<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><pre><code>&lt;div id=&quot;app-4&quot;&gt;
-  &lt;ol&gt;
-    &lt;li v-for=&quot;todo in todos&quot;&gt;
-      {{ todo.text }}
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
+if exists(select 1 from sys.sysforeignkey where role=&apos;FK_HOTEL_REFERENCE_ROOM&apos;) then
+    alter table Hotel
+       delete foreign key FK_HOTEL_REFERENCE_ROOM
+end if;
 
-var app4 = new Vue({
-  el: &apos;#app-4&apos;,
-  data: {
-    todos: [
-      { text: &apos;学习 JavaScript&apos; },
-      { text: &apos;学习 Vue&apos; },
-      { text: &apos;整个牛项目&apos; }
-    ]
-  }
-})
-</code></pre><h2 id="处理用户输入"><a href="#处理用户输入" class="headerlink" title="处理用户输入"></a>处理用户输入</h2><pre><code>&lt;div id=&quot;app-5&quot;&gt;
-  &lt;p&gt;{{ message }}&lt;/p&gt;
-  &lt;button v-on:click=&quot;reverseMessage&quot;&gt;逆转消息&lt;/button&gt;
-&lt;/div&gt;
+if exists(select 1 from sys.sysforeignkey where role=&apos;FK_HOTEL_REFERENCE_CITY&apos;) then
+    alter table Hotel
+       delete foreign key FK_HOTEL_REFERENCE_CITY
+end if;
 
-var app5 = new Vue({
-  el: &apos;#app-5&apos;,
-  data: {
-    message: &apos;Hello Vue.js!&apos;
-  },
-  methods: {
-    reverseMessage: function () {
-      this.message = this.message.split(&apos;&apos;).reverse().join(&apos;&apos;)
-    }
-  }
-})
-</code></pre><p>v-on是一个事件监听器，我们可以通过它来调用在vue实例中的监听方法</p>
-<h2 id="一切的开始"><a href="#一切的开始" class="headerlink" title="一切的开始"></a>一切的开始</h2><pre><code>var vm = new Vue({
-  // 选项
-})
-</code></pre><p>我们可以通过传入选项来控制vm的行为。一个Vue应用由一个根Vue实例以及可选的嵌套的，可复用的组件树组成</p>
-<h2 id="生命周期钩子"><a href="#生命周期钩子" class="headerlink" title="生命周期钩子"></a>生命周期钩子</h2><p><img src="/2018/04/15/2018-4-13-Vue-js-Part1/lifecycle.png" alt="LifeCycle"><br>在生命周期的各个阶段，我们都可以添加钩子函数，来为vue添加不同的方法。以created为例：</p>
-<pre><code>new Vue({
-  data: {
-    a: 1
-  },
-  created: function () {
-    // `this` points to the vm instance
-    console.log(&apos;a is: &apos; + this.a)
-  }
-})
-// =&gt; &quot;a is: 1&quot;
-</code></pre>
+if exists(select 1 from sys.sysforeignkey where role=&apos;FK_RESERVAT_REFERENCE_CUSTOMER&apos;) then
+    alter table Reservation
+       delete foreign key FK_RESERVAT_REFERENCE_CUSTOMER
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role=&apos;FK_RESERVAT_REFERENCE_HOTEL&apos;) then
+    alter table Reservation
+       delete foreign key FK_RESERVAT_REFERENCE_HOTEL
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role=&apos;FK_SHOPPING_REFERENCE_RESERVAT&apos;) then
+    alter table ShoppingBasket
+       delete foreign key FK_SHOPPING_REFERENCE_RESERVAT
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role=&apos;FK_SHOPPING_REFERENCE_CUSTOMER&apos;) then
+    alter table ShoppingBasket
+       delete foreign key FK_SHOPPING_REFERENCE_CUSTOMER
+end if;
+
+drop table if exists City;
+
+drop table if exists Customer;
+
+drop table if exists Hotel;
+
+drop table if exists Reservation;
+
+drop table if exists Room;
+
+drop table if exists ShoppingBasket;
+
+/*==============================================================*/
+/* Table: City                                                  */
+/*==============================================================*/
+create table City 
+(
+   cityName             long varchar                   not null,
+   constraint PK_CITY primary key clustered (cityName)
+);
+
+/*==============================================================*/
+/* Table: Customer                                              */
+/*==============================================================*/
+create table Customer 
+(
+   name                 long varchar                   not null,
+   email                long varchar                   null,
+   phone                long varchar                   null,
+   constraint PK_CUSTOMER primary key clustered (name)
+);
+
+/*==============================================================*/
+/* Table: Hotel                                                 */
+/*==============================================================*/
+create table Hotel 
+(
+   name                 long varchar                   not null,
+   roomType             long varchar                   null,
+   cityName             long varchar                   null,
+   constraint PK_HOTEL primary key clustered (name)
+);
+
+/*==============================================================*/
+/* Table: Reservation                                           */
+/*==============================================================*/
+create table Reservation 
+(
+   CheckInDate          date                           null,
+   CheckOutDate         date                           null,
+   RoomType             long varchar                   null,
+   HotelName            long varchar                   null,
+   ReservationId        integer                        not null,
+   name                 long varchar                   null,
+   Hot_name             long varchar                   null,
+   CustomerName         long varchar                   null,
+   constraint PK_RESERVATION primary key clustered (ReservationId)
+);
+
+/*==============================================================*/
+/* Table: Room                                                  */
+/*==============================================================*/
+create table Room 
+(
+   roomType             long varchar                   not null,
+   quantity             integer                        null,
+   constraint PK_ROOM primary key clustered (roomType)
+);
+
+/*==============================================================*/
+/* Table: ShoppingBasket                                        */
+/*==============================================================*/
+create table ShoppingBasket 
+(
+   CustomerName         long varchar                   null,
+   ReservationId        integer                        not null,
+   name                 long varchar                   null,
+   constraint PK_SHOPPINGBASKET primary key clustered (ReservationId)
+);
+
+alter table Hotel
+   add constraint FK_HOTEL_REFERENCE_ROOM foreign key (roomType)
+      references Room (roomType)
+      on update restrict
+      on delete restrict;
+
+alter table Hotel
+   add constraint FK_HOTEL_REFERENCE_CITY foreign key (cityName)
+      references City (cityName)
+      on update restrict
+      on delete restrict;
+
+alter table Reservation
+   add constraint FK_RESERVAT_REFERENCE_CUSTOMER foreign key (name)
+      references Customer (name)
+      on update restrict
+      on delete restrict;
+
+alter table Reservation
+   add constraint FK_RESERVAT_REFERENCE_HOTEL foreign key (Hot_name)
+      references Hotel (name)
+      on update restrict
+      on delete restrict;
+
+alter table ShoppingBasket
+   add constraint FK_SHOPPING_REFERENCE_RESERVAT foreign key (ReservationId)
+      references Reservation (ReservationId)
+      on update restrict
+      on delete restrict;
+
+alter table ShoppingBasket
+   add constraint FK_SHOPPING_REFERENCE_CUSTOMER foreign key (name)
+      references Customer (name)
+      on update restrict
+      on delete restrict;
+</code></pre><p>数据库逻辑模型于领域模型的异同：<br>领域模型是一个商业建模范畴的概念，它和软件开发无关系。即使一个企业不开发软件也应该有业务模型。</p>
+<p>数据模型是系统设计以及实现的一部分。描述的是对用户需求在技术上的实现方法，用户不需要关心系统的数据模型，但必须关注领域模型。</p>
+
       
     </div>
     
@@ -411,7 +510,7 @@ var app5 = new Vue({
       
         <div class="post-tags">
           
-            <a href="/tags/System-Analysis-And-Design/" rel="tag"># System Analysis And Design</a>
+            <a href="/tags/System-Analysis-and-Design/" rel="tag"># System Analysis and Design</a>
           
         </div>
       
@@ -424,8 +523,8 @@ var app5 = new Vue({
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/18/2018-3-18-Homework2/" rel="next" title="2018-3-18-Homework2">
-                <i class="fa fa-chevron-left"></i> 2018-3-18-Homework2
+              <a href="/2018/04/22/2018-4-22-task4/" rel="next" title="2018-4-22-task4">
+                <i class="fa fa-chevron-left"></i> 2018-4-22-task4
               </a>
             
           </div>
@@ -433,10 +532,6 @@ var app5 = new Vue({
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/22/2018-4-22-task4/" rel="prev" title="2018-4-22-task4">
-                2018-4-22-task4 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -569,7 +664,7 @@ var app5 = new Vue({
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue-js"><span class="nav-number">1.</span> <span class="nav-text">Vue.js</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#声明式渲染"><span class="nav-number">1.1.</span> <span class="nav-text">声明式渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件与循环"><span class="nav-number">1.2.</span> <span class="nav-text">条件与循环</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#条件"><span class="nav-number">1.2.1.</span> <span class="nav-text">条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环"><span class="nav-number">1.2.2.</span> <span class="nav-text">循环</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理用户输入"><span class="nav-number">1.3.</span> <span class="nav-text">处理用户输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一切的开始"><span class="nav-number">1.4.</span> <span class="nav-text">一切的开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生命周期钩子"><span class="nav-number">1.5.</span> <span class="nav-text">生命周期钩子</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读-Asg-RH-文档，按用例构建领域模型。"><span class="nav-number">1.</span> <span class="nav-text">阅读 Asg_RH 文档，按用例构建领域模型。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库建模-E-R-模型"><span class="nav-number">2.</span> <span class="nav-text">数据库建模(E-R 模型)</span></a></li></ol></div>
             
 
           </div>
